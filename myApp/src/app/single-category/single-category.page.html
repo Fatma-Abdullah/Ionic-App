@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{category.name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let product of category.products"  (click)="productClicked(product)">
+    <img src={{product.product_img}} />
+    <ion-card-header>
+      <ion-card-title>{{product.name}}</ion-card-title>
+
+      <!-- <ion-card-content>
+        Weight: {{product.weight}}<br>
+        Price: {{product.price}}
+      </ion-card-content> -->
+      
+    </ion-card-header>
+</ion-card>
+</ion-content>

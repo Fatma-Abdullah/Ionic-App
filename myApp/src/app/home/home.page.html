@@ -1,0 +1,37 @@
+<!-- <div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+  <div class="flb">
+    <div class="Aligner-item Aligner-item--top"></div>
+    <img src="assets/logo.png">
+    <div class="Aligner-item Aligner-item--bottom"></div>
+  </div>
+</div> -->
+<div *ngIf="showSplash" class="splash">
+  <div class="spinner"></div>
+</div>
+
+<ion-content fullscreen padding scroll-y="false">
+
+  <ion-slides>
+
+    <ion-slide>
+      <img src="assets/slide-1.png" />
+      <h2>Welcome to our market app</h2>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/slide-2.png" />
+      <h2>Welcome to our market app</h2>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/slide-3.png" />
+      <h2>Welcome to our market app</h2>
+      <ion-button fill="clear" color="tertiary" (click)="homeClicked()">
+        Continue <ion-icon slot="end" name="arrow-forward"></ion-icon>
+
+      </ion-button>
+
+    </ion-slide>
+
+  </ion-slides>
+</ion-content>
